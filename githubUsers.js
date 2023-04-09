@@ -4,7 +4,7 @@ const FOLLOWERS_OR_FOLLOWING = true ? 'followers' : 'following';
 const GITHUB_PROFILE = 'ThePrimeagen';
 //High PAGE_LIMIT values can cause 'Error Code 429 too many requests' and greater fetching time.
 const PAGE_LIMIT = 10;
-let USERS = [];
+const USERS = [];
 
 //Fetch Github Users
 (async () => {
@@ -42,7 +42,7 @@ let USERS = [];
 
   //All users found within the pages range.
   console.log(`\nAll Users:\n${USERS.toString().replaceAll(',', '\n')}\n`);
-  //Users found using name.
+  //Users found using a name.
   console.log(
     `Filtered Users:\n${USERS.filter((user) => user.includes('Insert a name'))
       .toString()
